@@ -1,4 +1,4 @@
-FROM erdc/jupyterhub:latest
+FROM erdc/jupyterhub:python3
 
 MAINTAINER Proteus Project <proteus@googlegroups.com>
 
@@ -8,7 +8,8 @@ WORKDIR /home/$NB_USER
 
 RUN git clone https://github.com/erdc/proteus && \
     cd proteus && \
+    git checkout python3 && \
+    git submodule update --init && \
     make stack stack/hit/bin/hit stack/default.yaml && \
-    ./stack/hit/bin/hit remote add http://levant.hrwallingford.com/hashdist_jovyan --objects="build" && \
     cd stack && \
-    ./hit/bin/hit build default.yaml -v
+    ./hit/bin/hit build -j 4 default.yaml -v
