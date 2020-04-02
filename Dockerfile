@@ -35,8 +35,8 @@ RUN git clone https://github.com/erdc/proteus && \
     chmod u+rwX -R /home/$NB_USER/.hashdist/src && \
     rm -rf rm -rf /home/$NB_USER/.hashdist/src && \
     rm -rf /home/$NB_USER/.cache && \
-    chmod u+rwX -R /home/$NB_USER/.hashdist/bld/chrono/6wuiehuoulpt/share/chrono/data && \
-    rm -rf /home/$NB_USER/.hashdist/bld/chrono/6wuiehuoulpt/share/chrono/data/* && \
+    chmod u+rwX -R /home/$NB_USER/.hashdist/bld/chrono/*/share/chrono/data && \
+    rm -rf /home/$NB_USER/.hashdist/bld/chrono/*/share/chrono/data/* && \
     rm -rf /home/$NB_USER/proteus/.git && \
     rm -rf /home/$NB_USER/stack/.git && \
     rm -rf /home/$NB_USER/air-water-vv/.git && \
