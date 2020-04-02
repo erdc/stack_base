@@ -41,4 +41,5 @@ RUN git clone https://github.com/erdc/proteus && \
     rm -rf /home/$NB_USER/stack/.git && \
     rm -rf /home/$NB_USER/air-water-vv/.git && \
     rm -rf /home/$NB_USER/proteus/air-water-vv && \
-    rm -rf /home/$NB_USER/proteus/build
+    rm -rf /home/$NB_USER/proteus/build && \
+    rm -rf /home/$NB_USER/proteus/stack/default
