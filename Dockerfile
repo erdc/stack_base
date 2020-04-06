@@ -31,7 +31,7 @@ RUN git clone https://github.com/erdc/proteus && \
     ./stack/hit/bin/hit remote add http://levant.hrwallingford.com/hashdist_src --objects="source" && \
     make stack stack/hit/bin/hit stack/default.yaml && \
     cd stack && \
-    ./hit/bin/hit build -j 4 default.yaml -v && \
+    ./hit/bin/hit build default.yaml -v && \
     chmod u+rwX -R /home/$NB_USER/.hashdist/src && \
     rm -rf rm -rf /home/$NB_USER/.hashdist/src && \
     rm -rf /home/$NB_USER/.cache && \
