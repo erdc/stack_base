@@ -6,7 +6,7 @@ USER jovyan
 
 WORKDIR /home/$NB_USER
 
-RUN git clone https://github.com/erdc-cm/proteus -b 1.5.x && \
+RUN git clone https://github.com/erdc/proteus -b 1.5.x && \
     cd proteus && \
     make hashdist stack stack/default.yaml && \
     ./hashdist/bin/hit init-home && \
